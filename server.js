@@ -14,4 +14,11 @@ io.on("connection", newConnection);
 
 function newConnection(socket) {
   console.log("client: " + socket.client.id);
+  socket.on("mouse", mouseMessage);
+
+  function mouseMessage(data) {
+    console.log(socket.client.id, data);
+
+    socket.broadcast.emit("mouseBroadcast", data);
+  }
 }
