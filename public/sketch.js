@@ -1,3 +1,10 @@
+let socket = io();
+socket.on("connect", newConnection);
+
+function newConnection() {
+  console.log("id: " + socket.id);
+}
+
 function preload(){
   // put preload code here
 }
