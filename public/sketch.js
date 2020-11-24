@@ -11,7 +11,7 @@ function drawOther(data) {
   var myWord = "Hey :)";
   fill("white");
   textAlign(CENTER);
-  textSize(random(12, 17));
+  textSize(random(11, 17));
   text(myWord, data.x, data.y);
 }
 
@@ -31,7 +31,7 @@ function mouseMoved() {
   var myWord = "Hello!";
   fill("black");
   textAlign(CENTER);
-  textSize(random(12, 17));
+  textSize(random(11, 17));
   text(myWord, mouseX, mouseY);
   pop();
 
