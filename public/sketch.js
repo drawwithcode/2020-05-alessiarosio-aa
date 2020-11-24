@@ -8,11 +8,14 @@ function newConnection() {
 
 function drawOther(data) {
   console.log(data);
-  ellipse(data.x, data.y, 20);
+  var myWord = "Hey :)";
+  fill("white");
+  textAlign(CENTER);
+  textSize(random(12, 17));
+  text(myWord, data.x, data.y);
 }
 
 function preload(){
-  // put preload code here
 }
 
 function setup() {
@@ -21,11 +24,16 @@ function setup() {
 }
 
 function draw() {
-  // put drawing code here
 }
 
 function mouseMoved() {
-  ellipse(mouseX, mouseY, 15);
+  push();
+  var myWord = "Hello!";
+  fill("black");
+  textAlign(CENTER);
+  textSize(random(12, 17));
+  text(myWord, mouseX, mouseY);
+  pop();
 
   let message = {
     x: mouseX,
